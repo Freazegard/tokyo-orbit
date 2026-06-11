@@ -1,7 +1,9 @@
 import { create } from 'zustand'
 
 export const useViewStore = create((set) => ({
-  cameraView: false,
+  // Production deploys land directly inside the cinematic; local dev keeps the
+  // editor available so the keyframe-authoring workflow is unchanged.
+  cameraView: import.meta.env.PROD,
   enterCameraView: () => set({ cameraView: true }),
   exitCameraView: () => set({ cameraView: false }),
   toggle: () => set((s) => ({ cameraView: !s.cameraView })),
