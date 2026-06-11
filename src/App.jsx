@@ -10,22 +10,22 @@ import './App.css'
 const TITLES = [
   {
     title: ['Littlest', 'Tokyo'],
-    body: 'Scroll to fly through the scene.',
+    body: 'A city in miniature, in constant motion.',
     align: 'left',
   },
   {
     title: ['Living', 'streets'],
-    body: 'Cars, banners and helicopters move with animations baked into the GLB.',
+    body: 'Cars, banners, light — every frame is alive.',
     align: 'right',
   },
   {
-    title: ['Cinematic', 'camera'],
-    body: 'The camera follows a 3D path — scroll is "time".',
+    title: ['From', 'above'],
+    body: 'The same city, a different angle.',
     align: 'left',
   },
   {
-    title: ['End of', 'shot'],
-    body: 'R3F + drei. Model: Glen Fox (CC-BY).',
+    title: ['Always', 'turning'],
+    body: 'Built to orbit. Built to breathe.',
     align: 'right',
   },
 ]
@@ -151,6 +151,12 @@ export default function App() {
       </div>
 
       {cameraView && <div className="hint">scroll ↓</div>}
+
+      {cameraView && (
+        <div className="credit">
+          Model: Glen Fox · <abbr title="Creative Commons Attribution">CC-BY</abbr>
+        </div>
+      )}
     </div>
   )
 }
